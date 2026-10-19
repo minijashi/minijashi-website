@@ -1,0 +1,407 @@
+
+/* ========================================
+   MINIJASHI — ESTILOS GENERALES
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f7f4;
+    color: #171717;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.rojo {
+    color: #e32626;
+}
+
+
+/* ========================================
+   NAVEGACIÓN
+======================================== */
+
+.navegacion {
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #171717;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.navegacion nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navegacion nav a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.navegacion nav a:hover {
+    color: #e32626;
+}
+
+
+/* ========================================
+   PORTADA
+======================================== */
+
+.portada {
+    min-height: 80vh;
+    padding: 70px 5% 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #171717;
+}
+
+.introduccion {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.portada h1 {
+    font-size: clamp(60px, 12vw, 175px);
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: -0.09em;
+    margin: 80px 0;
+}
+
+.portada h1 span {
+    display: inline-block;
+}
+
+.portada-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.portada-inferior p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.boton {
+    display: inline-block;
+    border: 1px solid #171717;
+    padding: 14px 22px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #171717;
+    color: #f8f7f4;
+}
+
+
+/* ========================================
+   PERFIL DE TRABAJO
+======================================== */
+
+.perfil {
+    padding: 100px 5%;
+    border-bottom: 1px solid #171717;
+}
+
+.titulo-seccion {
+    margin-bottom: 60px;
+}
+
+.titulo-seccion > p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.titulo-seccion h2 {
+    font-size: clamp(50px, 9vw, 120px);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+}
+
+.perfil-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.
+/* FOTO DE PERFIL */
+
+.foto {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-color: #e7e4de;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.foto p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    padding: 8px 12px;
+    background-color: #f8f7f4;
+    color: #171717;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.descripcion {
+    padding-top: 20px;
+    max-width: 500px;
+}
+
+.etiquta {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.descripcion .etiqueta {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.descripcion h3 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.descripcion > p:not(.etiqueta) {
+    font-size: 17px;
+    margin-bottom: 20px;
+    max-width: 450px;
+}
+
+
+/* ========================================
+   ARCHIVO DE PUBLICACIONES
+======================================== */
+
+.archivo {
+    padding: 100px 5%;
+    border-bottom: 1px solid #171717;
+}
+
+.archivo > .etiqueta {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.archivo h2 {
+    font-size: clamp(50px, 9vw, 120px);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+    margin-bottom: 70px;
+}
+
+.publicaciones {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.publicacion {
+    min-height: 260px;
+    padding: 25px;
+    border: 1px solid #171717;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.publicacion:hover {
+    background-color: #171717;
+    color: #f8f7f4;
+}
+
+.publicacion > p {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.publicacion h3 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin: 35px 0;
+}
+
+.publicacion a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    align-self: flex-start;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 5px;
+}
+
+
+/* ========================================
+   CONTACTO
+======================================== */
+
+footer {
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   TABLET Y MÓVIL
+======================================== */
+
+@media (max-width: 768px) {
+
+    .navegacion {
+        padding: 20px 5%;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navegacion nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .portada {
+        min-height: 65vh;
+        padding-top: 50px;
+    }
+
+    .portada h1 {
+        font-size: clamp(55px, 13vw, 100px);
+        margin: 70px 0;
+    }
+
+    .portada-inferior {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .perfil,
+    .archivo {
+        padding: 70px 5%;
+    }
+
+    .perfil-contenido {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .foto {
+        min-height: 350px;
+    }
+
+    .publicaciones {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .publicacion {
+        min-height: 220px;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+/* ========================================
+   MÓVILES PEQUEÑOS
+======================================== */
+
+@media (max-width: 400px) {
+
+    .navegacion nav a {
+        font-size: 10px;
+    }
+
+    .portada h1 {
+        font-size: 55px;
+    }
+
+    .titulo-seccion h2,
+    .archivo h2 {
+        font-size: 50px;
+    }
+
+    .foto {
+        min-height: 280px;
+    }
+
+}
