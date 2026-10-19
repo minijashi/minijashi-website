@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fanzine: Lo que queda en los bordes | MiniJashi</title>
+
+    <style>
+        /* ESTILO GENERAL */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f7f7f5;
+            color: #171717;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* NAVEGACIÓN */
+
+        header {
+            width: 100%;
+            padding: 22px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #d8d8d8;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 11px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #e00000;
+        }
+
+
+        /* INTRODUCCIÓN */
+
+        .introduccion {
+            max-width: 720px;
+            margin: 100px auto 90px;
+            padding: 0 25px;
+        }
+
+        .etiqueta {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .introduccion h1 {
+            font-size: clamp(38px, 7vw, 76px);
+            line-height: 0.95;
+            letter-spacing: -4px;
+            margin: 0 0 40px;
+            text-transform: uppercase;
+        }
+
+        .rojo {
+            color: #e00000;
+        }
+
+        .texto-intro {
+            max-width: 500px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .texto-intro p {
+            margin-bottom: 20px;
+        }
+
+        .texto-intro a {
+            text-decoration: underline;
+            text-decoration-color: #e00000;
+            text-underline-offset: 4px;
+        }
+
+
+        /* FANZINE: CUADRÍCULA DE DOS COLUMNAS */
+
+        .fanzine {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 45px 35px;
+
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 35px 25px;
+
+            background-color: #d6d6d6;
+        }
+
+        /* PÁGINAS DEL FANZINE */
+
+        .pagina {
+            display: block;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            margin: 0;
+
+            background-color: #ffffff;
+            border: 1px solid #eeeeee;
+            box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* COMENTARIOS */
+
+        .comentarios {
+            max-width: 720px;
+            margin: 120px auto;
+            padding: 40px 25px 0;
+            border-top: 1px solid #d8d8d8;
+        }
+
+        .comentarios h2 {
+            font-size: 25px;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            border-top: 1px solid #d8d8d8;
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        footer a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer p {
+            color: #777;
+        }
+
+
+        /* DISEÑO PARA CELULAR */
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 22px 15px;
+            }
+
+            nav {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            .introduccion {
+                margin: 65px auto 55px;
+                padding: 0 22px;
+            }
+
+            .introduccion h1 {
+                font-size: 42px;
+                letterletter-spacing: -2px;
+            }
+
+            .texto-intro {
+                font-size: 14px;
+            }
+
+            /* UNA COLUMNA EN CELULAR */
+
+            .fanzine {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 25px 20px;
+            }
+
+            .pagina {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            .comentarios {
+                margin: 80px auto;
+                padding: 30px 22px 0;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="logo" href="index.html">MiniJashi<span class="rojo">®</span></a>
+
+        <nav>
+            <a href="index.html#inicio">INICIO</a>
+            <a href="index.html#perfil">PERFIL</a>
+            <a href="index.html#archivo">ARCHIVO</a>
+            <a href="index.html#contacto">CONTACTO</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- INTRODUCCIÓN DEL FANZINE -->
+
+        <section class="introduccion">
+
+            <div class="etiqueta">
+                Archivo digital / 2026
+            </div>
+
+            <h1>
+                LO QUE QUEDA<br>
+                EN LOS BORDES<span class="rojo">.</span>
+            </h1>
+
+            <div class="texto-intro">
+
+                <p>
+                    Este fanzine se completó después de dos años de escritura
+                    y de un proceso muy largo.
+                </p>
+
+                <p>
+                    Fue publicado en dos ediciones físicas durante julio de 2026,
+                    acompañadas de sus respectivos stickers de MiniJashi.
+                </p>
+
+                <p>
+                    No se realizarán nuevas ediciones físicas. Ahora pueden
+                    encontrarlo en formato digital, exclusivamente en este website.
+                </p>
+
+                <p>
+                    En mi
+                    <a href="https://www.instagram.com/mini_jashi/?hl=es-la"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Instagram
+                    </a>
+                    pueden conocer un poco más sobre el proceso detrás de este proyecto.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PÁGINAS DEL FANZINE -->
+
+        <section class="fanzine">
+
+            <img class="pagina" src="Imagenes/01.jpg.png" alt="Página 1 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/02.jpg.png" alt="Página 2 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/03.jpg.png" alt="Página 3 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/04.jpg.png" alt="Página 4 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/05.jpg.png" alt="Página 5 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/06.jpg.png" alt="Página 6 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/07.jpg.png" alt="Página 7 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/08.jpg.png" alt="Página 8 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/09.jpg.png" alt="Página 9 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/10.jpg.png" alt="Página 10 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/11.jpg.png" alt="Página 11 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/12.jpg.png" alt="Página 12 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/13.jpg.png" alt="Página 13 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/14.jpg.png" alt="Página 14 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/15.jpg.png" alt="Página 15 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/16.jpg.png" alt="Página 16 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/17.jpg.png" alt="Página 17 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/18.jpg.png" alt="Página 18 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/19.jpg.png" alt="Página 19 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/20.jpg.png" alt="Página 20 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/21.jpg.png" alt="Página 21 del fanzine" loading="lazy">
+            <img class="pagina" src="Imagenes/22.jpg.png" alt="Página 22 del fanzine" loading="lazy">
+
+        </section>
+
+
+        <!-- COMENTARIOS -->
+
+        <section class="comentarios">
+
+            <h2>Comentarios<span class="rojo">.</span></h2>
+
+            <div id="free-comments"></div>
+
+            <script
+                src="https://freecomments.io/embed.js"
+                data-site-key="9a2c6716cff64a9eb3eb7a2b1390e73"
+                async>
+            </script>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <a href="index.html">MiniJashi<span class="rojo">®</span></a>
+        <p>Blog personal · 2026</p>
+    </footer>
+
+</body>
+</html>
