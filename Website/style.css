@@ -1,26 +1,31 @@
+/* ==========================================================================
+   MINIJASHI WEBSITE - ESTILO CONSTRUCTIVISTA / BRUTALISTA EDITORIAL
+   ========================================================================== */
 
-/* ========================================
-   MINI JASHI — BLOG PERSONAL
-   Estética: cuaderno, collage y editorial
-======================================== */
-
+/* VARIABLES GENERALES */
 :root {
-    --papel: #f7f5ef;
-    --negro: #191919;
-    --rojo: #ef6262;
-    --amarillo: #f4d64e;
-    --verde: #78c88a;
-    --azul: #91b8d3;
-    --rosa: #f2a6c1;
-    --linea: rgba(30, 30, 30, 0.15);
+    --rojo-principal: #e00000;
+    --negro: #111111;
+    --blanco: #ffffff;
+    --fondo-sitio: #f7f7f5;
+    --gris-suave: #eeeeee;
+    
+    /* Colores secundario para acentos puntuales */
+    --amarillo-acento: #ffde59;
+    --azul-acento: #004aad;
+    --verde-acento: #00bf63;
+
+    /* Tipografías */
+    --fuente-titulos: 'Arial Black', 'Impact', sans-serif;
+    --fuente-cuerpo: Arial, Helvetica, sans-serif;
+    --fuente-mono: 'Courier New', Courier, monospace;
 }
 
-/* BASE */
-
+/* RESET */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -28,16 +33,10 @@ html {
 }
 
 body {
-    background-color: var(--papel);
+    background-color: var(--fondo-sitio);
     color: var(--negro);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-
-    background-image:
-        linear-gradient(var(--linea) 1px, transparent 1px),
-        linear-gradient(90deg, var(--linea) 1px, transparent 1px);
-
-    background-size: 28px 28px;
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
 }
 
 a {
@@ -45,472 +44,363 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
 .rojo {
-    color: var(--rojo);
+    color: var(--rojo-principal);
 }
 
+.etiqueta {
+    display: inline-block;
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--amarillo-acento);
+    color: var(--negro);
+    padding: 4px 10px;
+    border: 2px solid var(--negro);
+    margin-bottom: 20px;
+}
 
-/* ========================================
-   NAVEGACIÓN
-======================================== */
-
-.navegacion {
-    position: relative;
-    z-index: 2;
-
+/* --------------------------------------------------------------------------
+   NAVEGACIÓN / HEADER
+   -------------------------------------------------------------------------- */
+header, .navegacion {
+    width: 100%;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
-
-    padding: 18px 5%;
-
-    background-color: var(--papel);
-    border-bottom: 2px solid var(--negro);
+    background-color: var(--blanco);
+    border-bottom: 3px solid var(--negro);
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: 900;
-    letter-spacing: -1.5px;
+    font-family: var(--fuente-titulos);
+    font-size: 24px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
 }
 
-.navegacion nav {
+nav {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    gap: 15px;
 }
 
-.navegacion nav a {
-    padding: 9px 13px;
-
-    font-size: 11px;
+nav a {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 0.5px;
-
-    border: 1px solid transparent;
+    padding: 6px 12px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
 }
 
-.navegacion nav a:hover {
-    background-color: var(--amarillo);
-    border: 1px solid var(--negro);
+nav a:hover {
+    background-color: var(--rojo-principal);
+    color: var(--blanco);
+    border-color: var(--negro);
 }
 
-
-/* ========================================
-   INICIO
-======================================== */
-
+/* --------------------------------------------------------------------------
+   PÁGINA INICIAL - SECCIÓN PORTADA
+   -------------------------------------------------------------------------- */
 .portada {
-    min-height: 80vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    padding: 80px 8% 60px;
-
-    background-color: var(--papel);
-    color: var(--negro);
-
-    border-bottom: 2px solid var(--negro);
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--blanco);
+    border: 3px solid var(--negro);
+    box-shadow: 8px 8px 0px var(--negro);
 }
 
-.introduccion,
-.etiqueta {
-    font-size: 11px;
-    font-weight: bold;
+.portada .introduccion {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
     letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 15px;
 }
 
 .portada h1 {
-    max-width: 1100px;
-
-    font-size: clamp(55px, 11vw, 150px);
-    font-weight: 900;
-    line-height: 0.9;
-    letter-spacing: -7px;
-
-    margin: 50px 0;
+    font-family: var(--fuente-titulos);
+    font-size: clamp(40px, 7vw, 80px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 .portada-inferior {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    gap: 25px;
+    align-items: center;
+    border-top: 2px solid var(--negro);
+    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .portada-inferior p {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .boton {
     display: inline-block;
-
-    padding: 13px 20px;
-
-    background-color: var(--amarillo);
-    color: var(--negro);
-
-    border: 2px solid var(--negro);
-
-    font-size: 11px;
+    font-family: var(--fuente-mono);
+    font-size: 13px;
     font-weight: bold;
+    background-color: var(--rojo-principal);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border: 2px solid var(--negro);
+    box-shadow: 4px 4px 0px var(--negro);
+    transition: all 0.2s ease;
 }
 
 .boton:hover {
-    background-color: var(--rojo);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--negro);
 }
 
-
-/* ========================================
-   SOBRE MÍ
-======================================== */
-
+/* --------------------------------------------------------------------------
+   PÁGINA INICIAL - SECCIÓN SOBRE MÍ / PERFIL
+   -------------------------------------------------------------------------- */
 .perfil {
-    padding: 90px 8%;
-
-    background-color: var(--negro);
-    color: var(--papel);
-
-    border-bottom: 2px solid var(--negro);
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: var(--blanco);
+    border: 3px solid var(--negro);
+    box-shadow: 8px 8px 0px var(--rojo-principal);
 }
 
-.titulo-seccion h2,
-.archivo h2 {
-    font-size: clamp(45px, 8vw, 100px);
-    line-height: 0.95;
-    letter-spacing: -5px;
+.titulo-seccion p {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-    margin-top: 25px;
+.titulo-seccion h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(30px, 5vw, 55px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 .perfil-contenido {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-
-    align-items: center;
-
-    margin-top: 60px;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    align-items: start;
 }
 
 .foto {
-    max-width: 430px;
+    text-align: center;
 }
 
-.foto img {
+.foto-perfil {
     width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-
-    background-color: var(--papel);
-
-    border: 2px solid var(--papel);
-    padding: 8px;
+    height: auto;
+    border: 2px solid var(--negro);
+    box-shadow: 4px 4px 0px var(--negro);
+    margin-bottom: 10px;
 }
 
 .foto p {
-    margin-top: 12px;
+    font-family: var(--fuente-mono);
     font-size: 11px;
-}
-
-.descripcion {
-    max-width: 500px;
 }
 
 .descripcion h3 {
-    font-size: clamp(35px, 5vw, 60px);
-    line-height: 1;
-    letter-spacing: -2px;
-
-    margin: 20px 0;
+    font-family: var(--fuente-titulos);
+    font-size: 24px;
+    margin: 10px 0 15px;
 }
 
 .descripcion p {
-    margin-bottom: 20px;
-}
-
-.perfil .etiqueta {
-    color: var(--amarillo);
-}
-
-
-/* ========================================
-   ARCHIVO
-======================================== */
-
-.archivo {
-    padding: 90px 8%;
-
-    background-color: var(--papel);
-    color: var(--negro);
-
-    border-bottom: 2px solid var(--negro);
-}
-
-.publicaciones {
-    margin-top: 55px;
-    border-top: 2px solid var(--negro);
-}
-
-.publicacion {
-    position: relative;
-
-    padding: 30px;
-    margin: 0;
-
-    border-bottom: 2px solid var(--negro);
-    background-color: var(--papel);
-}
-
-.publicacion:nth-child(1) {
-    background-color: var(--amarillo);
-}
-
-.publicacion:nth-child(2) {
-    background-color: var(--verde);
-}
-
-.publicacion:nth-child(3) {
-    background-color: var(--azul);
-}
-
-.publicacion p {
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.publicacion h3 {
-    font-size: clamp(25px, 4vw, 45px);
-    line-height: 1.1;
-    letter-spacing: -1.5px;
-
-    margin: 12px 0 20px;
-}
-
-.publicacion a {
-    display: inline-block;
-
-    padding: 9px 13px;
-
-    border: 1px solid var(--negro);
-    background-color: var(--papel);
-
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.publicacion a:hover {
-    background-color: var(--rojo);
-}
-
-
-/* ========================================
-   PÁGINA DE FOTOGRAFÍA
-======================================== */
-
-.publicacion-individual {
-    max-width: 1000px;
-    margin: 0 auto;
-
-    padding: 90px 8% 70px;
-
-    background-color: var(--papel);
-}
-
-.publicacion-individual h1 {
-    font-size: clamp(45px, 8vw, 100px);
-    line-height: 0.95;
-    letter-spacing: -5px;
-
-    margin: 30px 0;
-}
-
-.publicacion-individual > p:not(.etiqueta) {
-    max-width: 650px;
-    font-size: 18px;
-
-    margin-bottom: 50px;
-}
-
-
-/* ========================================
-   FOTOGRAFÍAS
-======================================== */
-
-.fotografias {
-    display: flex;
-    flex-direction: column;
-    gap: 55px;
-
-    margin-top: 50px;
-}
-
-.fotografias figure {
-    width: 100%;
-    padding: 10px;
-
-    border: 1px solid var(--negro);
-    background-color: #ffffff;
-}
-
-.fotografias img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.fotografias figcaption {
-    padding: 10px 5px 3px;
-
-    font-size: 11px;
-    font-weight: bold;
-}
-
-
-/* ========================================
-   COMENTARIOS
-======================================== */
-
-.comentarios {
-    max-width: 1000px;
-    margin: 0 auto;
-
-    padding: 70px 8% 100px;
-
-    background-color: var(--papel);
-    color: var(--negro);
-
-    border-top: 2px solid var(--negro);
-}
-
-.comentarios h2 {
-    font-size: clamp(35px, 6vw, 65px);
-    line-height: 1;
-    letter-spacing: -3px;
-
-    margin-bottom: 20px;
-}
-
-.comentarios > p {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 15px;
 }
 
-#free-comments {
-    width: 100%;
-    min-height: 100px;
-    margin-top: 30px;
+/* --------------------------------------------------------------------------
+   PÁGINA INICIAL - SECCIÓN ARCHIVO
+   -------------------------------------------------------------------------- */
+.archivo {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: var(--blanco);
+    border: 3px solid var(--negro);
+    box-shadow: 8px 8px 0px var(--negro);
 }
 
+.archivo h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(30px, 5vw, 55px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
 
-/* ========================================
-   CONTACTO
-======================================== */
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.publicaciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+}
 
-    padding: 30px 8%;
+.publicacion {
+    padding: 20px;
+    border: 2px solid var(--negro);
+    background-color: var(--fondo-sitio);
+    box-shadow: 4px 4px 0px var(--negro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    background-color: var(--negro);
-    color: var(--papel);
+.publicacion:nth-child(1) { border-left: 6px solid var(--amarillo-acento); }
+.publicacion:nth-child(2) { border-left: 6px solid var(--verde-acento); }
+.publicacion:nth-child(3) { border-left: 6px solid var(--azul-acento); }
+.publicacion:nth-child(4) { border-left: 6px solid var(--rojo-principal); }
 
-    border-top: 2px solid var(--negro);
-
+.publicacion p {
+    font-family: var(--fuente-mono);
     font-size: 11px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-footer a:hover {
-    color: var(--amarillo);
+.publicacion h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
+.publicacion a {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--rojo-principal);
+    align-self: flex-start;
+}
 
-/* ========================================
-   CELULARES
-======================================== */
+.publicacion a:hover {
+    text-decoration: underline;
+}
 
-@media (max-width: 700px) {
+/* --------------------------------------------------------------------------
+   CONTACTO / FOOTER
+   -------------------------------------------------------------------------- */
+footer, #contacto {
+    max-width: 900px;
+    margin: 80px auto 40px;
+    padding: 40px;
+    background-color: var(--blanco);
+    border: 3px solid var(--negro);
+    box-shadow: 8px 8px 0px var(--azul-acento);
+}
 
-    .navegacion {
+footer h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(30px, 5vw, 55px);
+    margin-bottom: 25px;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.redes-sociales a {
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid var(--negro);
+    background-color: var(--fondo-sitio);
+    box-shadow: 3px 3px 0px var(--negro);
+    transition: all 0.2s ease;
+}
+
+.redes-sociales a:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+footer > p {
+    font-family: var(--fuente-mono);
+    font-size: 11px;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   PÁGINA FANZINE (FANZINE-001.HTML)
+   -------------------------------------------------------------------------- */
+.fanzine {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    background-color: var(--blanco);
+    border: 3px solid var(--negro);
+    box-shadow: 8px 8px 0px var(--negro);
+}
+
+.pagina {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--negro);
+    box-shadow: 4px 4px 0px var(--negro);
+}
+
+.comentarios {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: var(--blanco);
+    border: 3px solid var(--negro);
+    box-shadow: 8px 8px 0px var(--verde-acento);
+}
+
+.comentarios h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   DISEÑO ADAPTABLE (CELULARES)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    header, .navegacion {
         flex-direction: column;
-        align-items: flex-start;
-
-        padding: 20px 5%;
-    }
-
-    .navegacion nav {
-        gap: 5px;
-    }
-
-    .navegacion nav a {
-        padding: 8px;
-        font-size: 10px;
-    }
-
-    .portada {
-        min-height: 70vh;
-        padding: 65px 5% 40px;
-    }
-
-    .portada h1 {
-        letter-spacing: -3px;
-    }
-
-    .portada-inferior {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .perfil,
-    .archivo {
-        padding: 65px 5%;
+        gap: 15px;
     }
 
     .perfil-contenido {
         grid-template-columns: 1fr;
-        gap: 35px;
     }
 
-    .foto {
-        max-width: 100%;
+    .publicaciones, .fanzine {
+        grid-template-columns: 1fr;
     }
 
-    .publicacion {
-        padding: 25px 20px;
+    .portada, .perfil, .archivo, footer, .comentarios {
+        margin: 30px 15px;
+        padding: 20px;
+        box-shadow: 5px 5px 0px var(--negro);
     }
 
-    .publicacion-individual {
-        padding: 65px 5% 50px;
-    }
-
-    .publicacion-individual h1 {
-        letter-spacing: -3px;
-    }
-
-    .comentarios {
-        padding: 55px 5% 70px;
-    }
-
-    footer {
+    .portada-inferior {
         flex-direction: column;
+        gap: 15px;
         align-items: flex-start;
-
-        padding: 25px 5%;
     }
-
 }
