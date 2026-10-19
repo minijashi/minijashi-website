@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Imágenes que guardé — MiniJashi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="navegacion">
+
+        <a href="index.html" class="logo">MiniJashi®</a>
+
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="index.html#perfil">PERFIL</a>
+            <a href="index.html#archivo">ARCHIVO</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- PUBLICACIÓN -->
+        <article class="publicacion-individual">
+
+            <p class="etiqueta">FOTOGRAFÍA / 001</p>
+
+            <h1>
+                Imágenes que guardé<span class="rojo">.</span>
+            </h1>
+
+            <p>
+                Un pequeño archivo de imágenes,
+                recuerdos y cosas que me llamaron la atención.
+            </p>
+
+
+            <!-- FOTOGRAFÍAS -->
+
+            <div class="fotografias">
+
+                <!-- FOTO 1 -->
+                <figure>
+                    <img
+                        src="Imagenes/1ardilla.png"
+                        alt="Fotografía 1"
+                    >
+                    <figcaption>01 / Una imagen que guardé.</figcaption>
+                </figure>
+
+                <!-- FOTO 2 -->
+                <figure>
+                    <img
+                        src="Imagenes/2ardilla.png"
+                        alt="Fotografía 2"
+                    >
+                    <figcaption>02 / Otro pequeño recuerdo.</figcaption>
+                </figure>
+
+                <!-- FOTO 3 -->
+                <figure>
+                    <img
+                        src="Imagenes/1ardilla.png"
+                        alt="Fotografía 3"
+                    >
+                    <figcaption>03 / Algo que me llamó la atención.</figcaption>
+                </figure>
+
+            </div>
+
+        </article>
+
+
+        <!-- COMENTARIOS -->
+        <section class="comentarios" id="comentarios">
+
+            <h2>
+                COMENTARIOS<span class="rojo">.</span>
+            </h2>
+
+            <p>
+                ¿Qué te pareció esta publicación?
+            </p>
+
+            <div id="free-comments"></div>
+
+            <script
+                src="https://freecomments.io/embed.js"
+                data-site-key="9a2c6716cff64a9eb3eb7a2b1390e73"
+                async>
+            </script>
+
+        </section>
+
+
+        <!-- VOLVER -->
+        <footer>
+
+            <a href="index.html#archivo">
+                ← VOLVER AL ARCHIVO
+            </a>
+
+            <p>MINIJASHI® — HECHO POR MÍ, CON MUCHO AMOR.</p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
